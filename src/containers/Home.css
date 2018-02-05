@@ -9,7 +9,7 @@
 }
 
 .background2 {
-  height: 270px;
+  height: 330px;
   background: url('../images/coffee.jpeg');
   background-size: cover;
   background-position: center center;
@@ -42,6 +42,16 @@
   background-position: center center;
   background-attachment: fixed;
   width: 100%;
+}
+
+.background6 {
+  height: 750px;
+  background: url('../images/coffee.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+  text-align: center;
 }
 
 @keyframes arrows {

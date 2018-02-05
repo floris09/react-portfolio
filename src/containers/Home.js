@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { About, Portfolio } from '../components'
+import { About, Portfolio, Contact } from '../components'
 import './Home.css'
 
 class Home extends PureComponent {
@@ -34,6 +34,11 @@ class Home extends PureComponent {
 
         <div className='black-bar'></div>
 
+        <div className='background6'>
+          <div className='whitebox'>
+            <Contact />
+          </div>
+        </div>
 
       </div>
     );
