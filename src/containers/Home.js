@@ -6,7 +6,7 @@ class Home extends PureComponent {
   render() {
     return (
       <div>
-        <div className='background1'><i class="fas fa-angle-double-down"></i></div>
+        <div className='background1'><i className="fas fa-angle-double-down"></i></div>
 
         <div className='black-bar'></div>
 

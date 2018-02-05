@@ -50,15 +50,16 @@ class Contact extends PureComponent {
     this.setState({
       [name]: value
     })
-
-    console.log(this.state.phoneIsValid)
   }
 
   handleSubmit(){
-    const { firstNameIsValid, lastNameIsValid, emailIsValid, messageIsValid } = this.state
+    const { firstNameIsValid, lastNameIsValid, emailIsValid, phoneIsValid, messageIsValid } = this.state
+    var valid = false
 
-    if ((firstNameIsValid===true && messageIsValid===true)&&(lastNameIsValid===true && emailIsValid===true)){
-    }
+    if ((firstNameIsValid===true && messageIsValid===true)&&(lastNameIsValid===true && emailIsValid===true)){ valid = phoneIsValid }
+
+
+    console.log(valid)
 
   }
 

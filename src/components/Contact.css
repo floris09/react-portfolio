@@ -44,3 +44,11 @@ form {
   color: red;
   border-bottom: 2px solid red;
 }
+
+.send-button {
+  width: 100px;
+  height: 50px;
+  background-color: blue;
+  display: inline-block;
+  border: 1px solid black;
+}
