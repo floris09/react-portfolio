@@ -1,24 +1,38 @@
-.background {
+.background1 {
+  height: 750px;
+  background: url('../images/wave.jpg');
+  text-align: center;
   background-size: cover;
   background-position: center center;
   background-attachment: fixed;
   width: 100%;
 }
 
-.background1 {
-  height: 750px;
-  background: url('../images/wave.jpg');
-  text-align: center;
-}
-
 .background2 {
-  height: 280px;
+  height: 270px;
   background: url('../images/coffee.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
 }
 
 .background3 {
   height: 750px;
   background: url('../images/mountains.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.background4 {
+  height: 750px;
+  background: url('../images/rooftop.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
 }
 
 @keyframes arrows {
