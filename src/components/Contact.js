@@ -25,6 +25,7 @@ class Contact extends PureComponent {
     const value = target.value
     const name = target.name
     const regexpEmail = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+\.[A-Za-z]+$/
+    const regexpPhone = /[a-zA-Z]/
 
     if (name === "firstName") {
       this.setState({ firstNameIsValid: value && value.indexOf(' ') < 0 })
@@ -42,9 +43,15 @@ class Contact extends PureComponent {
       this.setState({ messageIsValid: value !== '' })
     }
 
+    if (name === "phone") {
+      this.setState({ phoneIsValid: value.match(regexpPhone) == null })
+    }
+
     this.setState({
       [name]: value
     })
+
+    console.log(this.state.phoneIsValid)
   }
 
   handleSubmit(){
@@ -61,7 +68,7 @@ class Contact extends PureComponent {
       <div>
         <form className='form'>
           <input
-            className={this.state.firstNameIsVal ? 'input' : 'input invalid'}
+            className={this.state.firstNameIsValid ? 'input' : 'input invalid'}
             name="firstName"
             type="text"
             placeholder="First name"
@@ -69,7 +76,7 @@ class Contact extends PureComponent {
             onChange={this.handleInputChange} />
 
           <input
-            className={this.state.lastNameIsVal ? 'input' : 'input invalid'}
+            className={this.state.lastNameIsValid ? 'input' : 'input invalid'}
             name="lastName"
             type="text"
             placeholder="Last name"
@@ -77,7 +84,7 @@ class Contact extends PureComponent {
             onChange={this.handleInputChange} />
 
           <input
-            className={this.state.emailIsVal ? 'input' : 'input invalid'}
+            className={this.state.emailIsValid ? 'input' : 'input invalid'}
             name="email"
             type="text"
             placeholder="Email address"
@@ -85,7 +92,7 @@ class Contact extends PureComponent {
             onChange={this.handleInputChange} />
 
           <input
-            className='input'
+            className={this.state.phoneIsValid ? 'input' : 'input invalid'}
             name="phone"
             type="text"
             placeholder="Phone number (optional)"
@@ -93,7 +100,7 @@ class Contact extends PureComponent {
             onChange={this.handleInputChange} />
 
           <textarea
-            className={this.state.messageIsVal ? 'textarea' : 'textarea invalid'}
+            className={this.state.messageIsValid ? 'textarea' : 'textarea invalid'}
             name="message"
             type="text"
             placeholder="Your message..."
