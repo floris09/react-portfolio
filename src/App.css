@@ -27,3 +27,7 @@
 .clear-right {
   clear: right;
 }
+
+.center-content {
+  text-align: center;
+}

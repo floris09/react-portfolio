@@ -1,0 +1,77 @@
+.portfolio {
+  height: 560px;
+  width: 1000px;
+  margin: auto;
+}
+
+.blv1 {
+  background: url('../images/blv1.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.blv2 {
+  background: url('../images/blv2.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.blv3 {
+  background: url('../images/blv3.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.tam1 {
+  background: url('../images/tamtam1.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.tam2 {
+  background: url('../images/tamtam2.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.tam3 {
+  background: url('../images/tamtam3.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.matcher1 {
+  background: url('../images/matcher1.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.matcher2 {
+  background: url('../images/matcher2.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.matcher3 {
+  background: url('../images/matcher3.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.evaluation1 {
+  background: url('../images/evaluation1.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.evaluation2 {
+  background: url('../images/evaluation2.png');
+  background-size: cover;
+  background-position: center bottom;
+}
+
+.evaluation3 {
+  background: url('../images/evaluation3.png');
+  background-size: cover;
+  background-position: center bottom;
+}

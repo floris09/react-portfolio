@@ -27,6 +27,15 @@
 }
 
 .background4 {
+  height: 700px;
+  background: url('../images/coffee.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.background5 {
   height: 750px;
   background: url('../images/rooftop.jpg');
   background-size: cover;
