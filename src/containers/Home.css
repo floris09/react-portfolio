@@ -1,0 +1,54 @@
+.background {
+  background-size: cover;
+  background-position: center center;
+  background-attachment: fixed;
+  width: 100%;
+}
+
+.background1 {
+  height: 750px;
+  background: url('../images/wave.jpg');
+  text-align: center;
+}
+
+.background2 {
+  height: 280px;
+  background: url('../images/coffee.jpeg');
+}
+
+.background3 {
+  height: 750px;
+  background: url('../images/mountains.jpeg');
+}
+
+@keyframes arrows {
+  0% {top: 350px;}
+  20% {top: 380px;}
+  100% {top: 350px;}
+}
+
+.fa-angle-double-down {
+  position: relative;
+  color: white;
+  font-size: 70px;
+  top: 350px;
+  animation-name: arrows;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+.black-bar {
+  height: 100px;
+  width: 100%;
+  background-color: black;
+}
+
+.whitebox {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255,255,255,0.8);
+  padding-left: 50px;
+  padding-top: 20px;
+  padding-right: 50px;
+}

@@ -1,0 +1,29 @@
+* {
+  /* border: 1px solid black; */
+  box-sizing: border-box;
+}
+
+.name {
+  font-family: "Kaushan Script", cursive;
+}
+
+.title {
+  font-family: "Basic", sans-serif;
+}
+
+.text {
+  font-family: "Basic", sans-serif;
+  font-size: 16px;
+}
+
+.float-left {
+  float: left;
+}
+
+.clear-left {
+  clear: left;
+}
+
+.clear-right {
+  clear: right;
+}

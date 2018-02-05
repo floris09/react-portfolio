@@ -1,0 +1,17 @@
+.profile-img {
+  background: url('../images/profile.jpg');
+  background-size: cover;
+  height: 230px;
+  width: 230px;
+  border-radius: 5px;
+  display: inline-block;
+  margin-right: 25px;
+}
+
+h1 {
+  width: 800px;
+}
+
+p {
+  width: 800px;
+}
