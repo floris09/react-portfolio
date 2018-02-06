@@ -40,6 +40,12 @@ class Home extends PureComponent {
           </div>
         </div>
 
+        <div className='black-bar'></div>
+
+        <div className='background7'>
+          <h2>Have a great day</h2>
+        </div>
+
       </div>
     );
   }
