@@ -3,7 +3,7 @@ import request from 'superagent'
 export default class ApiClient {
 
   constructor(host, options = {}) {
-    this.host = 'localhost:3030'
+    this.host = 'https://florismeininger-mailer-api.herokuapp.com'
 
     this.options = { ...options }
   }
