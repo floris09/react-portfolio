@@ -3,9 +3,7 @@ import request from 'superagent'
 export default class ApiClient {
 
   constructor(host, options = {}) {
-    this.host = process.env.NODE_ENV === 'production'
-      ? 'https://florismeininger-mailer-api.herokuapp.com'
-      : (host || 'http://localhost:3030')
+    this.host = 'https://florismeininger-mailer-api.herokuapp.com'
 
     this.options = { ...options }
   }

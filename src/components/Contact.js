@@ -130,9 +130,9 @@ class Contact extends PureComponent {
       </div>
 
       <div className='social'>
-        <a href="https://www.github.com/floris09" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"></i></a>
-        <a href="https://www.linkedin.com/in/floris-meininger-3738b193/" target="_blank"  rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/floris.meininger" target="_blank"  rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.github.com/floris09" target="_blank" rel="noopener noreferrer"><i className="fab fa-github-square"></i></a>
+        <a href="https://www.linkedin.com/in/floris-meininger-3738b193/" target="_blank"  rel="noopener noreferrer"><i className="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/floris.meininger" target="_blank"  rel="noopener noreferrer"><i className="fab fa-facebook-square"></i></a>
       </div>
 
       </div>
