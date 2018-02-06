@@ -1,4 +1,6 @@
 import React, { PureComponent } from 'react';
+import { connect } from 'react-redux'
+import sendMail from '../actions/mail'
 import './Contact.css'
 
 class Contact extends PureComponent {
@@ -53,11 +55,14 @@ class Contact extends PureComponent {
   }
 
   handleSubmit(){
-    const { firstNameIsValid, lastNameIsValid, emailIsValid, phoneIsValid, messageIsValid } = this.state
+    const { firstNameIsValid, lastNameIsValid, emailIsValid, phoneIsValid, messageIsValid, firstName, lastName, email, phone, message } = this.state
     var valid = false
 
     if ((firstNameIsValid===true && messageIsValid===true)&&(lastNameIsValid===true && emailIsValid===true)){ valid = phoneIsValid }
 
+    if (valid === false){ return console.log('input not valid')}
+
+    this.props.sendMail({firstName, lastName, email, phone, message})
   }
 
 
@@ -113,9 +118,9 @@ class Contact extends PureComponent {
       </div>
 
       <div className='social'>
-        <a href="https://www.github.com/floris09" target="_blank"><i class="fab fa-github-square"></i></a>
-        <a href="https://www.linkedin.com/in/floris-meininger-3738b193/" target="_blank"><i class="fab fa-linkedin"></i></a>
-        <a href="https://www.facebook.com/floris.meininger" target="_blank"><i class="fab fa-facebook-square"></i></a>
+        <a href="https://www.github.com/floris09" target="_blank" rel="noopener noreferrer"><i class="fab fa-github-square"></i></a>
+        <a href="https://www.linkedin.com/in/floris-meininger-3738b193/" target="_blank"  rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/floris.meininger" target="_blank"  rel="noopener noreferrer"><i class="fab fa-facebook-square"></i></a>
       </div>
 
       </div>
@@ -123,4 +128,4 @@ class Contact extends PureComponent {
   }
 }
 
-export default Contact;
+export default connect(null, { sendMail })(Contact)
