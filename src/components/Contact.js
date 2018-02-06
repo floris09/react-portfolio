@@ -58,15 +58,14 @@ class Contact extends PureComponent {
 
     if ((firstNameIsValid===true && messageIsValid===true)&&(lastNameIsValid===true && emailIsValid===true)){ valid = phoneIsValid }
 
-
-    console.log(valid)
-
   }
 
 
   render() {
     return (
       <div>
+        <h3>Contact</h3>
+
         <form className='form'>
           <input
             className={this.state.firstNameIsValid ? 'input' : 'input invalid'}
@@ -110,7 +109,13 @@ class Contact extends PureComponent {
         </form>
 
       <div className='send-button' onClick={this.handleSubmit.bind(this)}>
-        <p>Send</p>
+        Send
+      </div>
+
+      <div className='social'>
+        <a href="https://www.github.com/floris09" target="_blank"><i class="fab fa-github-square"></i></a>
+        <a href="https://www.linkedin.com/in/floris-meininger-3738b193/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        <a href="https://www.facebook.com/floris.meininger" target="_blank"><i class="fab fa-facebook-square"></i></a>
       </div>
 
       </div>
