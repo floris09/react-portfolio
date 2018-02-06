@@ -17,6 +17,10 @@ export default class ApiClient {
       .send(data)
   }
 
+  createUrl(path) {
+    return [this.host, path].join('')
+  }
+
   headers() {
     let headers = {
       Accept: 'application/json'

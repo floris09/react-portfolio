@@ -1,6 +1,5 @@
 import React, { PureComponent } from 'react';
-import { connect } from 'react-redux'
-import sendMail from '../actions/mail'
+import API from '../api/client'
 import './Contact.css'
 
 class Contact extends PureComponent {
@@ -62,7 +61,20 @@ class Contact extends PureComponent {
 
     if (valid === false){ return console.log('input not valid')}
 
-    this.props.sendMail({firstName, lastName, email, phone, message})
+    this.sendMail({firstName, lastName, email, phone, message})
+  }
+
+  sendMail(body){
+    console.log(body)
+    const api = new API()
+
+        api.post('/mailer', {...body})
+          .then((result) => {
+            console.log(result.body)
+          })
+          .catch((error) => {
+            console.log(error)
+          })
   }
 
 
@@ -128,4 +140,4 @@ class Contact extends PureComponent {
   }
 }
 
-export default connect(null, { sendMail })(Contact)
+export default Contact;
