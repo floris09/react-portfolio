@@ -12,7 +12,8 @@ export default class ApiClient {
     return fetch(this.createUrl(path), {
       method: 'POST',
       headers: this.headers(),
-      body: data.attach
+      body: data.attach,
+      type: 'text/plain'
     })
     .then(res => res.json())
     .catch(err => console.log(err))
@@ -24,7 +25,7 @@ export default class ApiClient {
 
   headers() {
     let headers = {
-      Accept: 'text/plain'
+      Accept: 'application/json'
     }
 
     return headers
