@@ -9,10 +9,13 @@ export default class ApiClient {
   }
 
   post(path, data = {}) {
-    return request
-      .post(this.createUrl(path))
-      .set(this.headers())
-      .send(data)
+    return fetch(this.createUrl(path), {
+      method: 'POST',
+      headers: this.headers(),
+      body: data.attach
+    })
+    .then(res => res.json())
+    .catch(err => console.log(err))
   }
 
   createUrl(path) {
@@ -21,7 +24,7 @@ export default class ApiClient {
 
   headers() {
     let headers = {
-      Accept: 'text/plain'
+      Accept: 'application/json'
     }
 
     return headers
