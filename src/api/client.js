@@ -21,7 +21,7 @@ export default class ApiClient {
 
   headers() {
     let headers = {
-      Accept: 'application/json'
+      Accept: 'text/plain'
     }
 
     return headers
