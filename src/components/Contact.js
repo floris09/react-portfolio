@@ -68,7 +68,10 @@ class Contact extends PureComponent {
     console.log(body)
     const api = new API()
 
-        api.post('/mailer', {...body})
+    var data = new FormData()
+    data.append('body',body)
+
+        api.post('/mailer', { attach: body })
           .then((result) => {
             console.log(result.body)
           })

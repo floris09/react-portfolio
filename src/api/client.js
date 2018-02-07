@@ -9,14 +9,26 @@ export default class ApiClient {
   }
 
   post(path, data = {}) {
-    return request
-      .post(this.createUrl(path))
-      .send(data)
+    return fetch(this.createUrl(path), {
+      method: 'POST',
+      headers: headers,
+      body: data.attach,
+      mode: 'no-cors'
+    })
+    .then(res => res.json())
+    .catch(err => console.log(err))
   }
 
   createUrl(path) {
     return [this.host, path].join('')
   }
 
+  headers() {
+    let headers = {
+      Accept: 'application/json'
+    }
+
+    return headers
+  }
 
 }
